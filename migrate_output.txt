@@ -1,0 +1,28 @@
+
+  Dropping all tables  6.01ms DONE
+
+   INFO  Preparing database.  
+
+  Creating migration table  8.04ms DONE
+
+   INFO  Running migrations.  
+
+  0001_01_01_000000_create_users_table  26.14ms DONE
+  0001_01_01_000001_create_cache_table  15.66ms DONE
+  0001_01_01_000002_create_jobs_table  21.12ms DONE
+  2026_03_31_012333_create_clients_table  7.03ms DONE
+  2026_03_31_012441_create_bookings_table  3.64ms DONE
+  2026_03_31_012525_create_airports_table  3.66ms DONE
+  2026_03_31_013957_create_countries_table  3.74ms DONE
+  2026_03_31_014138_create_directions_table  3.67ms DONE
+  2026_03_31_015333_create_travel_classes_table  7.21ms DONE
+  2026_03_31_015453_create_aircraft_manufactures_table  7.79ms DONE
+  2026_03_31_015510_create_aircraft_seats_table  3.75ms DONE
+  2026_03_31_015619_create_aircraft_instances_table  4.04ms DONE
+  2026_03_31_015634_create_flight_statuses_table  7.27ms DONE
+  2026_03_31_015704_create_schedules_table  3.81ms DONE
+  2026_03_31_015730_create_flights_table  4.07ms DONE
+  2026_03_31_015751_create_flight_aircraft_instances_table  3.75ms DONE
+  2026_03_31_015810_create_flight_seat_prices_table  3.87ms DONE
+  2026_03_31_022928_create_aircraft_table  4.17ms DONE
+

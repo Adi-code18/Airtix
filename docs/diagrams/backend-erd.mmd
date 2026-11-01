@@ -1,0 +1,20 @@
+---
+title: "ERD - Skema Database AIRTIX"
+---
+erDiagram
+    USERS ||--o| CLIENTS : "email unik (konseptual)"
+    COUNTRIES ||--o{ AIRPORTS : "data_country_code"
+    AIRPORTS ||--o{ SCHEDULES : "origin/destination"
+    TRAVEL_CLASSES ||--o{ AIRCRAFT_SEATS : "travel_class_id"
+    AIRCRAFT_MANUFACTURES ||--o{ AIRCRAFT : "aircraft_manufacture_id"
+    AIRCRAFT ||--o{ AIRCRAFT_INSTANCES : "aircraft_id"
+    AIRCRAFT_INSTANCES ||--o{ FLIGHT_AIRCRAFT_INSTANCES : "aircraft_instance_id"
+    FLIGHTS ||--o{ FLIGHT_AIRCRAFT_INSTANCES : "flight_call"
+    SCHEDULES ||--o{ FLIGHTS : "schedule_id"
+    FLIGHT_STATUSES ||--o{ FLIGHTS : "flight_status_id"
+    FLIGHTS ||--o{ FLIGHT_SEAT_PRICES : "flight_call"
+    AIRCRAFT ||--o{ FLIGHT_SEAT_PRICES : "aircraft_id"
+    USERS ||--o{ BOOKINGS : "via clients (konseptual)"
+    CLIENTS ||--o{ BOOKINGS : "client_id"
+    FLIGHTS ||--o{ BOOKINGS : "flight_call"
+    AIRCRAFT_SEATS ||--o{ BOOKINGS : "seat_id (aircraft_seat_id)"

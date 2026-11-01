@@ -1,0 +1,16 @@
+---
+title: "DFD Level 1 - Proses Utama AIRTIX API"
+---
+flowchart TB
+    M([Aplikasi Mobile]) -->|1.0 registrasi/login| P1(AuthController)
+    P1 -->|tulis users + clients + token| DB[(DB)]
+    M -->|"2.0 cari bandara (q)"| P2(FlightDataController)
+    P2 -->|baca airports| DB
+    M -->|"3.0 cari penerbangan (origin, destination, date)"| P3(FlightDataController flights)
+    P3 -->|baca schedules/flights/aircraft/price| DB
+    M -->|4.0 lihat kursi schedule id| P4(FlightDataController seats)
+    P4 -->|baca aircraft_seats + bookings| DB
+    M -->|"5.0 booking (schedule_id + seats)"| P5(BookingController store)
+    P5 -->|cek duplikat, tulis bookings| DB
+    M -->|6.0 riwayat & refund| P6(BookingController index/refund)
+    P6 -->|baca/hapus bookings| DB

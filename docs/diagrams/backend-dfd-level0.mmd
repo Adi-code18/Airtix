@@ -1,0 +1,7 @@
+---
+title: "DFD Level 0 - Sistem AIRTIX API"
+---
+flowchart LR
+    M([Aplikasi Mobile]) -->|registrasi / login / cari / pesan / refund| API
+    API{{Sistem AIRTIX API}} -->|baca & tulis| DB[(MySQL airtix)]
+    API -->|token Sanctum| M
